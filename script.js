@@ -2,7 +2,7 @@
     'use strict';
 
     // ===== CONFIGURATION =====
-    const GENDER = "girl"; // "boy" lub "girl"
+    const GENDER = "boy"; // "boy" lub "girl"
 
     // ===== INGREDIENTS (CAULDRON GAME) =====
     const ingredients = [
