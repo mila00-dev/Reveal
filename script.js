@@ -142,7 +142,8 @@
             messageEl.className = 'message success';
             cauldron.className = 'cauldron success';
             document.querySelectorAll('.ingredient-btn').forEach(b => b.classList.add('disabled'));
-            setTimeout(() => showReveal(), 2000);
+            setTimeout(() => { cauldron.classList.add(GENDER); }, 300);
+            setTimeout(() => showReveal(), 5000);
         } else {
             messageEl.textContent = 'Hmm… coś nie zadziałało. Spróbuj ponownie!';
             messageEl.className = 'message fail';

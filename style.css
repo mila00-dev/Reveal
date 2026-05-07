@@ -757,8 +757,39 @@ body {
 }
 
 .cauldron.success .cauldron-liquid {
-    background: linear-gradient(180deg, #d5f4cd, #78c77e 55%, #4ca656);
-    box-shadow: inset 0 10px 18px rgba(255, 255, 255, 0.24), 0 0 28px rgba(102, 187, 106, 0.52);
+    animation: bubbleLiquid 0.5s ease infinite;
+}
+
+.cauldron.success.girl .cauldron-liquid {
+    animation: liquidToGirl 4s ease-in-out forwards, bubbleLiquid 0.5s ease infinite;
+    box-shadow: inset 0 10px 18px rgba(255, 255, 255, 0.28), 0 0 32px rgba(233, 30, 99, 0.45);
+}
+
+.cauldron.success.boy .cauldron-liquid {
+    animation: liquidToBoy 4s ease-in-out forwards, bubbleLiquid 0.5s ease infinite;
+    box-shadow: inset 0 10px 18px rgba(255, 255, 255, 0.28), 0 0 32px rgba(25, 118, 210, 0.45);
+}
+
+@keyframes liquidToGirl {
+    0% { background: linear-gradient(180deg, #f0b6f4, #be72db 42%, #8f33b8); }
+    15% { background: linear-gradient(180deg, #f0b6f4, #c46ad6 42%, #9c30b2); }
+    30% { background: linear-gradient(180deg, #f4c4e8, #cc64c8 42%, #a83498); }
+    45% { background: linear-gradient(180deg, #f8d0e4, #d860be 42%, #c03088); }
+    60% { background: linear-gradient(180deg, #fad8e8, #e470b4 42%, #d63a7a); }
+    75% { background: linear-gradient(180deg, #fce0ec, #ec80b2 50%, #e02e6e); }
+    90% { background: linear-gradient(180deg, #fce4ec, #f088b0 52%, #e42464); }
+    100% { background: linear-gradient(180deg, #fce4ec, #f48fb1 55%, #e91e63); }
+}
+
+@keyframes liquidToBoy {
+    0% { background: linear-gradient(180deg, #f0b6f4, #be72db 42%, #8f33b8); }
+    15% { background: linear-gradient(180deg, #e8c0f2, #ab78d8 42%, #7a44b4); }
+    30% { background: linear-gradient(180deg, #e0c8f0, #9880d4 42%, #6650b0); }
+    45% { background: linear-gradient(180deg, #d8d0ee, #8090d0 42%, #5060a8); }
+    60% { background: linear-gradient(180deg, #d0daf0, #6ca0d0 45%, #3878c0); }
+    75% { background: linear-gradient(180deg, #d8e8f8, #70aee0 48%, #2888d0); }
+    90% { background: linear-gradient(180deg, #e0eefa, #68b2f0 52%, #1e80d4); }
+    100% { background: linear-gradient(180deg, #e3f2fd, #64b5f6 55%, #1976d2); }
 }
 
 .cauldron.fail .cauldron-liquid {
